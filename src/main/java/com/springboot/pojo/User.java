@@ -13,7 +13,7 @@ public class User {
     @Column
     private int age;
     @Column
-    private String password;
+    private String address;
 
     public User() {
     }
@@ -21,7 +21,7 @@ public class User {
     public User(String name, int age, String password) {
         this.name = name;
         this.age = age;
-        this.password = password;
+        this.address = address;
     }
 
     public int getId() {
@@ -48,12 +48,12 @@ public class User {
         this.age = age;
     }
 
-    public String getPassword() {
-        return password;
+    public String getAddress() {
+        return address;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAddress(String password) {
+        this.address = address;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", password='" + password + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
