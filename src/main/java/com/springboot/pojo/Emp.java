@@ -1,5 +1,6 @@
 package com.springboot.pojo;
 
+
 import java.util.Date;
 
 public class Emp {
@@ -81,5 +82,19 @@ public class Emp {
 
     public void setDeptno(Integer deptno) {
         this.deptno = deptno;
+    }
+
+    @Override
+    public String toString() {
+        return "Emp{" +
+                "empno=" + empno +
+                ", ename='" + ename + '\'' +
+                ", job='" + job + '\'' +
+                ", mgr=" + mgr +
+                ", hiredate=" + hiredate +
+                ", sal=" + sal +
+                ", comm=" + comm +
+                ", deptno=" + deptno +
+                '}';
     }
 }

@@ -1,6 +1,7 @@
 package com.springboot.mapper;
 
 import com.springboot.pojo.Dept;
+import org.apache.ibatis.annotations.Mapper;
 
 public interface DeptMapper {
     int deleteByPrimaryKey(Integer deptno);

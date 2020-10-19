@@ -1,5 +1,6 @@
 package com.springboot.pojo;
 
+
 public class Dept {
     private Integer deptno;
 

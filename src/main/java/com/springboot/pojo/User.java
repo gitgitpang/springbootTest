@@ -1,34 +1,31 @@
 package com.springboot.pojo;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "user")
+import java.util.Date;
+
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column
+    private Long id;
     private String name;
-    @Column
-    private int age;
-    @Column
+    private Long age;
     private String address;
-
+    private Date gmtCreate;
+    private Date gmtModified;
     public User() {
     }
 
-    public User(String name, int age, String password) {
+    public User(String name, Long age, String address, Date gmtCreate, Date gmtModified) {
         this.name = name;
         this.age = age;
         this.address = address;
+        this.gmtCreate = gmtCreate;
+        this.gmtModified = gmtModified;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -40,11 +37,11 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
+    public Long getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Long age) {
         this.age = age;
     }
 
@@ -52,8 +49,24 @@ public class User {
         return address;
     }
 
-    public void setAddress(String password) {
+    public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Date getGmtCreate() {
+        return gmtCreate;
+    }
+
+    public void setGmtCreate(Date gmtCreate) {
+        this.gmtCreate = gmtCreate;
+    }
+
+    public Date getGmtModified() {
+        return gmtModified;
+    }
+
+    public void setGmtModified(Date gmtModified) {
+        this.gmtModified = gmtModified;
     }
 
     @Override
@@ -63,6 +76,8 @@ public class User {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", address='" + address + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
                 '}';
     }
 }

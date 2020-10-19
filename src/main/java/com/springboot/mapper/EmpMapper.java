@@ -2,6 +2,8 @@ package com.springboot.mapper;
 
 import com.springboot.pojo.Emp;
 
+import java.util.List;
+
 public interface EmpMapper {
     int deleteByPrimaryKey(Integer empno);
 
@@ -14,4 +16,6 @@ public interface EmpMapper {
     int updateByPrimaryKeySelective(Emp record);
 
     int updateByPrimaryKey(Emp record);
+    Emp findByName(String ename);
+    List<Emp> selectAll();
 }

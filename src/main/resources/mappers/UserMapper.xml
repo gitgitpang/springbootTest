@@ -5,6 +5,23 @@
 <mapper namespace="com.springboot.mapper.UserMapper">
     <!-- select 查询 -->
     <select id="findById" parameterType="int" resultType="User">
-        select * from user where id=#{id}
+        select id,name,age,address,gmt_create,gmt_modified from user where id=#{id}
     </select>
+    <select id="findUserAll" resultType="User">
+        select id,name,age,address, gmt_create,gmt_modified from user
+    </select>
+    <!--向user插入一条数据-->
+    <insert id="insert" parameterType="User">
+         insert into user
+         (id,name,age,address, gmt_create,gmt_modified)
+         values (#{id},#{name},#{age},#{address},#{gmtCreate},#{gmtModified})
+    </insert>
+    <!--<resultMap id="usermap" type="User">id,name,age,address,
+        <id column="id" javaType="BIGINT" property="id"/>
+        <result column="name" javaType="VACHAR" property="name"/>
+        <result column="age" javaType="INT" property="age"/>
+        <result column="address" javaType="VACHAR" property="address"/>
+        <result column="gmtCreate" javaType="DATETIME" property="gmt_create"/>
+        <result column="gmtModified" javaType="DATETIME" property="gmt_modified"/>
+    </resultMap>-->
 </mapper>
