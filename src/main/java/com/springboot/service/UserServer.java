@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface UserServer {
     User MybatisById(int Id);
-    List<User> findUserAll();
+    List<User> findUserServiceAll();
     void insert(User user);
 }

@@ -4,16 +4,16 @@ package com.springboot.pojo;
 import java.util.Date;
 
 public class User {
-    private Long id;
+    private long id;
     private String name;
-    private Long age;
+    private long age;
     private String address;
     private Date gmtCreate;
     private Date gmtModified;
     public User() {
     }
 
-    public User(String name, Long age, String address, Date gmtCreate, Date gmtModified) {
+    public User(String name, long age, String address, Date gmtCreate, Date gmtModified) {
         this.name = name;
         this.age = age;
         this.address = address;
@@ -21,11 +21,11 @@ public class User {
         this.gmtModified = gmtModified;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -37,11 +37,11 @@ public class User {
         this.name = name;
     }
 
-    public Long getAge() {
+    public long getAge() {
         return age;
     }
 
-    public void setAge(Long age) {
+    public void setAge(long age) {
         this.age = age;
     }
 

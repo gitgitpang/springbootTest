@@ -21,7 +21,7 @@ public class UserServerImpl implements UserServer {
     }
 
     @Override
-    public List<User> findUserAll() {
+    public List<User> findUserServiceAll() {
         List<User> userAll = userMapper.findUserAll();
         return userAll;
 

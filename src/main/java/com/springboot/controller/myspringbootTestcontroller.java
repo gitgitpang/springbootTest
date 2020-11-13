@@ -27,11 +27,7 @@ public class myspringbootTestcontroller {
     }
     @RequestMapping("/selectUserByAll")
     public List<User> mybatisIdByUser(){
-        List<User> userAll = userServer.findUserAll();
-        for (User u: userAll ) {
-            System.out.println(u);
-        }
-
+        List<User> userAll = userServer.findUserServiceAll();
         return userAll;
     }
     //向user表插入一条数据
