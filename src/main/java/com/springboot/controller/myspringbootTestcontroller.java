@@ -21,10 +21,12 @@ public class myspringbootTestcontroller {
     }
 
     @RequestMapping("/mybatisId/{id}")
+    //根据条件查询
     public User mybatisIdByUser(@PathVariable(name = "id") int id){
         User mybatisuser = userServer.MybatisById(id);
         return mybatisuser;
     }
+    //查询所有
     @RequestMapping("/selectUserByAll")
     public List<User> mybatisIdByUser(){
         List<User> userAll = userServer.findUserServiceAll();
@@ -36,5 +38,10 @@ public class myspringbootTestcontroller {
         userServer.insert(user);
         System.out.println("======");
         return user;
+    }
+    //根据id删除数据
+    @RequestMapping("/deleteUserById/{id}")
+    public void deleteUserById(@PathVariable(name = "id") int id){
+        userServer.deleteServById(id);
     }
 }

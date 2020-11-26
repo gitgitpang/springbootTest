@@ -12,4 +12,5 @@ public interface UserServer {
     User MybatisById(int Id);
     List<User> findUserServiceAll();
     void insert(User user);
+    void deleteServById(int id);
 }
