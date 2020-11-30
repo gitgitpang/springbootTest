@@ -1,6 +1,6 @@
-package cn.enjoy.service;
+package com.springboot.service;
 
 public interface House {
     //买房子
-    void buyHouse(long price);
+    void buyHouse(String address,long price);
 }
